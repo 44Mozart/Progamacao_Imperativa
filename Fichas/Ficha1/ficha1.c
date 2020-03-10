@@ -16,11 +16,11 @@ int main () {
   }
   return 0;
 }
-*/
+
 
 // ----------------- Exercicio 3 ---------------
 
-/*
+
 
 int main () {
   int i, j, n;
