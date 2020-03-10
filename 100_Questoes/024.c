@@ -7,4 +7,5 @@ int remRep (char texto []) {
         }
     }
     texto[j] = '\0';
-    r
+    return j;
+}
