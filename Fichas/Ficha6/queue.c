@@ -5,21 +5,28 @@
 // Static queues 
 
 void SinitQueue (SQueue q){
-	// ...
+	q->front = 0;
+	q->length = 0;
 }
 
 int  SisEmptyQ (SQueue q){
-    // ...
-	return (-1);
+    return (q->length == 0);
 }
 
 int  Senqueue (SQueue q, int x){
-	// ...
-	return (-1);
+	int r = 1;
+	if(q->length < Max){
+		q->value[q->length] = x;
+		q->length++;
+		r = 0;
+	}
+	return r;
 }
 
 int  Sdequeue (SQueue q, int *x) {
-	// ...
+	
+	if(q->length < Max){
+		*x = q->inicio
 	return (-1);
 }
 
