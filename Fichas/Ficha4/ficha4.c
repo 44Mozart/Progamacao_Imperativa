@@ -68,3 +68,50 @@ int procura (char *p, char *ps[], int N){
   return t;
 }
 
+// ---------------- E X E R C I C I O  5 ---------------
+
+#define MAX 100
+typedef struct stack {
+int sp;
+int valores [MAX];
+} STACK;
+
+void initStack (STACK *s) {
+  s->sp = 0;
+}
+
+int isEmptyS (STACK *s){
+  int r = 0;
+  if(s->sp == 0){
+    r = 1;
+  }
+  return r;
+}
+
+int push (STACK *s, int x) {
+  int r = 1;
+  if(s->sp < MAX){
+    s->valores[s->sp] =x;
+    s->sp++;
+    r = 0;
+    }
+  return r;
+}
+  int pop (STACK *s, int *x) {
+    int r = 1;
+    if (!(isEmpty(s)){
+      *x = s->valores[s->sp-1];
+      s->sp--;
+      r = 0;
+    }
+    return r;
+ }
+      
+int top (STACK *s, int *x){
+  int r = 1;
+  if (!(isEmpty(s)){
+    *x = s->valores[s->sp-1];
+    r = 0;
+  }
+  return r;
+}
