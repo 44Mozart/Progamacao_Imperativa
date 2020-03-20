@@ -17,7 +17,7 @@ void insere (int v[], int N, int x){
     }
     aux[j] = x;
     j++;
-    while (x <= v[i] && i < N){
+    while (i < N){
         aux[j] = v[i];
         j++;
         i++;
