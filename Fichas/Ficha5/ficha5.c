@@ -105,10 +105,10 @@ void bubblesort1 (int v[], int N){
 }
 
 void bubblesort2 (int v[], int N){
-	int i,m;
-	for (i = N; i > 0; i--){
+	int i,m,r = 0;
+	for (i = N; i > 0 && r == 0; i--){
 	    m = bubble(v,i);
-	    if (m == i) break;
+	    if (m == i) r = 1;
 	    swap(v,i,m);
 	}
 }
