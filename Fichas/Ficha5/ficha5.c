@@ -98,9 +98,9 @@ int bubble (int v[], int N) {
 
 void bubblesort1 (int v[], int N){
 	int i,m;
-	for (i = N; i > 0; i--){
-	    m = bubble(v,i);
-	    v[i] = v[m];
+	for (i = N-1; i >= 0; i--){
+	    m = bubble(v,i+1);
+	    swap(v,i,m);
 	}
 }
 
@@ -109,6 +109,6 @@ void bubblesort2 (int v[], int N){
 	for (i = N; i > 0; i--){
 	    m = bubble(v,i);
 	    if (m == i) break;
-	    v[i] = v[m];
+	    swap(v,i,m);
 	}
 }
