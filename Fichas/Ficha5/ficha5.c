@@ -8,6 +8,15 @@ void swap (int v[], int i, int j){
 /////// Insertion Sort 
 
 void insere (int v[], int N, int x){
+    int i, j;
+    for (i = 0; i < N && v[i] < x; i++);
+    for (j = N; j != i; j--) {
+        v[j] = v[j-1];
+    }
+    v[i] = x;
+}
+/*
+void insere (int v[], int N, int x){
      int aux[N+1];
     int j = 0,i = 0;
     while (x > v[i] && i < N){
@@ -26,6 +35,7 @@ void insere (int v[], int N, int x){
         v[i] = aux[i];
     }
 }
+*/
 
 void iSort1 (int v[], int N) {
 	int i; 
@@ -58,9 +68,9 @@ int maxInd (int v[], int N){
 
 void maxSort1 (int v[], int N) {
 	int i,m;
-	for(i = N; i > 0; i--){
-	    m = maxInd(v,i);
-	    v[i] = v[m];
+	for(i = N-1; i > 0; i--){
+	    m = maxInd(v,i+1);
+	    swap(v,i,m);
 	}
 }
 
