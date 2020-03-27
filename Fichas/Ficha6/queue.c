@@ -5,35 +5,43 @@
 // Static queues 
 
 void SinitQueue (SQueue q){
-	q->front = 0;
-	q->length = 0;
+     q->front = 0;
+     q->length = 0;
 }
 
-int  SisEmptyQ (SQueue q){
+int SisEmptyQ (SQueue q){
     return (q->length == 0);
 }
 
-int  Senqueue (SQueue q, int x){
-	int r = 1;
-	if(q->length < Max){
-		q->value[q->length] = x;
-		q->length++;
-		r = 0;
-	}
-	return r;
+int Senqueue (SQueue q, int x){
+    int r = 1;
+    if(q->length < Max){
+    	q->value[q->length] = x;
+    	q->length++;
+    	r = 0;
+     }
+     return r;
 }
 
-int  Sdequeue (SQueue q, int *x) {
-	
-	if(q->length < Max){
-		*x = q->inicio
-	return (-1);
+int Sdequeue (SQueue q, int *x) {
+    int r = 1;
+    if(!(SisEmptyQ(q)){
+         *x = q->values[q->front];
+         for(int i = 1; i < q->length; i++){
+	     q->values[i-1] = q->values[i];
+	 }
+	 r = 0;
+    }
+        return r;
 }
 
-int  Sfront (SQueue q, int *x) {
-	// ...
-	
-	return (-1);
+int Sfront (SQueue q, int *x) {	
+    int r = 1;
+    if(!(SisEmptyQ(q)){
+         *x = q->values[q->front];
+	 r = 0;
+    }
+    return r;
 }
 
 void ShowSQueue (SQueue q){
